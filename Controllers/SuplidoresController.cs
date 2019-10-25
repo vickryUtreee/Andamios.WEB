@@ -7,47 +7,48 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ProyectoAndamios.Controllers
 {
-    public class ClientesController : Microsoft.AspNetCore.Mvc.Controller
+    public class SuplidoresController : Microsoft.AspNetCore.Mvc.Controller
     {
-        // GET: Clientes
+        // GET: Suplidores
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Clientes/Details/5
+        // GET: Suplidores/Details/5
         public ActionResult Ver(int id)
         {
             return View();
         }
 
-        // GET: Clientes/Create
+        // GET: Suplidores/Create
         public ActionResult Create()
         {
             return View();
         }
 
+       
 
-        // GET: Clientes/Edit/5
+        // GET: Suplidores/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
- 
+        
 
-        // GET: Clientes/Delete/5
+        // GET: Suplidores/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        //Get: Cliente/CambiarEstado
+        //GET: Suplidores/CambiarEstado
         public ActionResult CambiarEstado(bool id)
         {
             return View();
         }
 
- 
+
     }
 }

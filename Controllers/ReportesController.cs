@@ -7,47 +7,47 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ProyectoAndamios.Controllers
 {
-    public class ClientesController : Microsoft.AspNetCore.Mvc.Controller
+    public class ReportesController : Microsoft.AspNetCore.Mvc.Controller
     {
-        // GET: Clientes
+        // GET: Reportes
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Clientes/Details/5
+        // GET: Reportes/Details/5
         public ActionResult Ver(int id)
         {
             return View();
         }
 
-        // GET: Clientes/Create
+        // GET: Reportes/Create
         public ActionResult Create()
         {
             return View();
         }
 
+      
 
-        // GET: Clientes/Edit/5
+        // GET: Reportes/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
- 
+      
 
-        // GET: Clientes/Delete/5
+        // GET: Reportes/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        //Get: Cliente/CambiarEstado
+        //GET: Reportes/CambiarEstado
         public ActionResult CambiarEstado(bool id)
         {
             return View();
         }
-
- 
+       
     }
 }
