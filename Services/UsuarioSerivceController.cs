@@ -12,7 +12,7 @@ namespace ProyectoAndamios.Controller
 {
     public class UsuarioServiceController : Microsoft.AspNetCore.Mvc.Controller
     {
-        private string baseUrl = "https://localhost:5001";
+        private string baseUrl = "http://localhost:53870";
 
         [HttpPost]
         public async Task<ActionResult> Register(RegisterViewModel model)
