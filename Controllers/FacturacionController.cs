@@ -7,47 +7,49 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ProyectoAndamios.Controllers
 {
-    public class ClientesController : Microsoft.AspNetCore.Mvc.Controller
+    public class FacturacionController : Microsoft.AspNetCore.Mvc.Controller
     {
-        // GET: Clientes
+        // GET: Facturacion
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Clientes/Details/5
+        // GET: Facturacion/Details/5
         public ActionResult Ver(int id)
         {
             return View();
         }
 
-        // GET: Clientes/Create
+        // GET: Facturacion/Create
         public ActionResult Create()
         {
             return View();
         }
 
+       
+       
 
-        // GET: Clientes/Edit/5
+        // GET: Facturacion/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
- 
+        
 
-        // GET: Clientes/Delete/5
+        // GET: Facturacion/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        //Get: Cliente/CambiarEstado
+        //GET: Facturacion/CambiarEstado
         public ActionResult CambiarEstado(bool id)
         {
             return View();
         }
 
- 
+
     }
 }
