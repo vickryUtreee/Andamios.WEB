@@ -2,53 +2,50 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ProyectoAndamios.Controllers
+namespace ProyectoAndamios.Areas.Reportes.Controllers
 {
-    
-    public class ClientesController : Microsoft.AspNetCore.Mvc.Controller
+    public class ReportesController : Microsoft.AspNetCore.Mvc.Controller
     {
-        // GET: Clientes
-        public string Index()
-        {
-            return "Fuera de areas";
-        }
+        [Area("Reportes")]
 
-        // GET: Clientes/Details/5
+        public IActionResult Index()
+        {
+            return View();
+        }
+        // GET: Reportes/Details/5
         public ActionResult Ver(int id)
         {
             return View();
         }
 
-        // GET: Clientes/Create
+        // GET: Reportes/Create
         public ActionResult Create()
         {
             return View();
         }
 
 
-        // GET: Clientes/Edit/5
+
+        // GET: Reportes/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
- 
 
-        // GET: Clientes/Delete/5
+
+        // GET: Reportes/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        //Get: Cliente/CambiarEstado
+        //GET: Reportes/CambiarEstado
         public ActionResult CambiarEstado(bool id)
         {
             return View();
         }
-
- 
     }
 }
