@@ -12,4 +12,25 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="Areas\Clientes\Data\" />
+    <Folder Include="Areas\Contratos\Data\" />
+    <Folder Include="Areas\CuentasPorCobrar\Data\" />
+    <Folder Include="Areas\Facturacion\Data\" />
+    <Folder Include="Areas\Inventario\Data\" />
+    <Folder Include="Areas\Reportes\Data\" />
+    <Folder Include="Areas\Seguridad\Data\" />
+    <Folder Include="Areas\Suplidores\Data\" />
+    <Folder Include="Areas\Usuarios\Data\" />
+    <Folder Include="Views\Clientes\" />
+    <Folder Include="Views\Contratos\" />
+    <Folder Include="Views\CuentasPorCobrar\" />
+    <Folder Include="Views\Facturacion\" />
+    <Folder Include="Views\Inventario\" />
+    <Folder Include="Views\Reportes\" />
+    <Folder Include="Views\Seguridad\" />
+    <Folder Include="Views\Suplidores\" />
+  </ItemGroup>
+
 </Project>

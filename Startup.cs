@@ -62,6 +62,20 @@ namespace ProyectoAndamios
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                    name: "areas",
+                    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
+                //routes.MapAreaRoute(
+                //    name: "Clientes",
+                //    areaName: "Clientes",
+                //    template: "Cliente/{controller=Home}/{action=Index}/{id?}");
+
+                //routes.MapAreaRoute(
+                //    name: "Contratos",
+                //    areaName: "Contratos",
+                //    template: "Contratos/{controller=Home}/{action=Index}/{id?}");
+
+                routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });

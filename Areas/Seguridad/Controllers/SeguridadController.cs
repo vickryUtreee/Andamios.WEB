@@ -2,53 +2,50 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ProyectoAndamios.Controllers
+namespace ProyectoAndamios.Areas.Seguridad.Controllers
 {
-    
-    public class ClientesController : Microsoft.AspNetCore.Mvc.Controller
-    {
-        // GET: Clientes
-        public string Index()
-        {
-            return "Fuera de areas";
-        }
+    [Area("Seguridad")]
 
-        // GET: Clientes/Details/5
+    public class SeguridadController : Microsoft.AspNetCore.Mvc.Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+        // GET: Seguridad/Details/5
         public ActionResult Ver(int id)
         {
             return View();
         }
 
-        // GET: Clientes/Create
+        // GET: Seguridad/Create
         public ActionResult Create()
         {
             return View();
         }
 
 
-        // GET: Clientes/Edit/5
+
+        // GET: Seguridad/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
- 
 
-        // GET: Clientes/Delete/5
+
+        // GET: Seguridad/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        //Get: Cliente/CambiarEstado
+        //GET: Seguridad/CambiarEstado
         public ActionResult CambiarEstado(bool id)
         {
             return View();
         }
-
- 
     }
 }
