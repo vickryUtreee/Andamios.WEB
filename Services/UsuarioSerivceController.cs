@@ -1,10 +1,12 @@
 
 using System;
+using System.IdentityModel.Tokens.Jwt;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using ProyectoAndamios.Helpers;
 using ProyectoAndamios.Models;
 
@@ -12,7 +14,7 @@ namespace ProyectoAndamios.Controller
 {
     public class UsuarioServiceController : Microsoft.AspNetCore.Mvc.Controller
     {
-        private string baseUrl = "https://localhost:5001";
+        private string baseUrl = "http://localhost:53870";
 
         [HttpPost]
         public async Task<ActionResult> Register(RegisterViewModel model)
@@ -66,6 +68,11 @@ namespace ProyectoAndamios.Controller
 
             if (response.IsSuccessStatusCode == true)
             {
+
+                var token = JsonConvert.DeserializeObject<TokenModel>(await response.Content.ReadAsStringAsync());
+
+                var handler = new JwtSecurityTokenHandler().ReadJwtToken(token.token) as JwtSecurityToken;
+
                 return RedirectToAction("home", "Home");
             }
 
