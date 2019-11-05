@@ -2,53 +2,50 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ProyectoAndamios.Controllers
+namespace ProyectoAndamios.Areas.Suplidores.Controllers
 {
-    
-    public class ClientesController : Microsoft.AspNetCore.Mvc.Controller
-    {
-        // GET: Clientes
-        public string Index()
-        {
-            return "Fuera de areas";
-        }
+    [Area("Suplidores")]
 
-        // GET: Clientes/Details/5
+    public class SuplidoresController : Microsoft.AspNetCore.Mvc.Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+        // GET: Suplidores/Details/5
         public ActionResult Ver(int id)
         {
             return View();
         }
 
-        // GET: Clientes/Create
+        // GET: Suplidores/Create
         public ActionResult Create()
         {
             return View();
         }
 
 
-        // GET: Clientes/Edit/5
+
+        // GET: Suplidores/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
- 
 
-        // GET: Clientes/Delete/5
+
+        // GET: Suplidores/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        //Get: Cliente/CambiarEstado
+        //GET: Suplidores/CambiarEstado
         public ActionResult CambiarEstado(bool id)
         {
             return View();
         }
-
- 
     }
 }
