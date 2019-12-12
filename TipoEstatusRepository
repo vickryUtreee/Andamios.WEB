@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Andamios.Core.Context;
+using Andamios.Core.Entities;
+using Andamios.Core.Interfaces;
+using Microsoft.EntityFrameworkCore;
+
+namespace Andamios.Core.Repository
+{
+    class TipoEstatusRepository : ITipoEstatus
+    {
+
+        private readonly AndamiosDominicanosContext _context;
+
+        public TipoEstatusRepository(AndamiosDominicanosContext context)
+        {
+            _context = context;
+        }
+
+        public IQueryable<TipoEstatus> TiposEstatus => _context.TipoEstatus;
+
+        //public int Id { get; private set; }
+
+        public TipoEstatus GetTipoById(int Id)
+        {
+            return _context.TipoEstatus.Find(Id);
+        }
+
+        public IQueryable<TipoEstatus> GetTipoByModelo(string modelo)
+        {
+            return _context.TipoEstatus.Where(x => x.Modelo == modelo);
+        }
+
+        public void GuardarTipo(TipoEstatus tipoEstatus)
+        {
+            if (tipoEstatus.EstatusId == 0)
+            {
+                _context.TipoEstatus.Add(tipoEstatus);
+            }
+            else
+            {
+                var p = _context.Provincias.Find(tipoEstatus.EstatusId);
+
+                _context.Entry(p).CurrentValues.SetValues(tipoEstatus);
+                _context.Entry(p).State = EntityState.Modified;
+            }
+
+            _context.SaveChanges();
+        }
+    }
+}
