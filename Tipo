@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Text;
+
+namespace Andamios.Core.Entities
+{
+    
+    class Tipo
+    {
+        private string _Nombre;
+        /// <summary>
+        /// Id del Tipo
+        /// </summary>
+        public int TipoId { get; set; }
+
+        /// <summary>
+        /// Nombre del Tipo 
+        /// </summary>
+        [MaxLength(10)]
+        public string Nombre
+        {
+            get { return _Nombre; }
+            set { _Nombre = value.ToUpper(); }
+        }
+
+        /// <summary>
+        /// Estado en que se encuentra
+        /// </summary>
+        public bool Estado { get; private set; } = true;
+        /// <summary>
+        /// Modelo del Tipo
+        /// </summary>
+        [MaxLength(30)]
+        public string Modelo { get; set; }
+        /// <summary>
+        /// Fecha que se creo el  Tipo
+        /// </summary>
+        public DateTime Creacion { get; set; }
+        /// <summary>
+        /// Fecha que se modifico el Tipo
+        /// </summary>
+        public DateTime Modificacion { get; set; }
+        /// <summary>
+        /// Usuario que creo o modifico el Tipo
+        /// </summary>
+        [MaxLength(40)]
+        public string Usuario { get; set; }
+    }
+}
