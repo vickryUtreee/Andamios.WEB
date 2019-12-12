@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Andamios.Core.Entities;
+
+namespace Andamios.Core.Interfaces
+{
+    public interface ITipo
+    {
+
+        IQueryable<Tipo> Tipos { get; }
+        IQueryable<Tipo> GetTipoByModelo(string modelo);
+        Tipo GetTipoById(int Id);
+        void GuardarTipo(Tipo tipo);
+    }
+}
