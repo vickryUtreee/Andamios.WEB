@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Text;
+using Andamios.Core.Migrations;
+
+namespace Andamios.Core.Entities
+{
+    class TipoEstatus
+    {
+        private string _Nombre;
+        /// <summary>
+        /// Id del Estado
+        /// </summary>
+        public int EstatusId { get; set;}
+
+        /// <summary>
+        /// Nombre del estado 
+        /// </summary>
+        [MaxLength(10)]
+        public string Nombre
+        {
+            get { return _Nombre;}
+            set { _Nombre = value.ToUpper(); }
+        }
+
+        /// <summary>
+        /// Estado en que se encuentra
+        /// </summary>
+        public bool Estado { get; private set; } = true;
+        /// <summary>
+        /// Modelo del estado
+        /// </summary>
+        [MaxLength(30)]
+        public  string Modelo { get; set;}
+        /// <summary>
+        /// Fecha que se creo el  estado
+        /// </summary>
+        public DateTime Creacion { get; set;}
+        /// <summary>
+        /// Fecha que se modifico el estado
+        /// </summary>
+        public DateTime Modificacion { get; set;}
+        /// <summary>
+        /// Usuario que creo o modifico el estado
+        /// </summary>
+        [MaxLength(40)]
+        public string Usuario { get; set; }
+
+    }
+}
